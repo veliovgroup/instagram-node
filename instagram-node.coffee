@@ -1,1 +1,0 @@
-instagramNode = Npm.require "instagram-node"
