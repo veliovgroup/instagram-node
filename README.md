@@ -15,13 +15,15 @@ meteor add ostrio:instagram-node
 Usage
 ==
 
-```coffeescript
-if Meteor.isServer
-  ig = instagramNode.instagram()
-
-  ig.use
-    client_id: 'YOUR_CLIENT_ID'
+```js
+if (Meteor.isServer) {
+  var ig = instagramNode.instagram();
+  ig.use({
+    client_id: 'YOUR_CLIENT_ID',
     client_secret: 'YOUR_CLIENT_SECRET'
-
-  ig.use access_token: 'YOUR_ACCESS_TOKEN'
+  });
+  ig.use({
+    access_token: 'YOUR_ACCESS_TOKEN'
+  });
+}
 ```
